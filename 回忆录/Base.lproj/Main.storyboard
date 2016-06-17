@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="回忆录" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGo-SL-gwx" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-hL-k5D" userLabel="actor">
+                                <rect key="frame" x="222" y="54" width="222" height="321"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AD-fR-wXD" userLabel="actor2">
+                                <rect key="frame" x="100" y="54" width="439" height="321"/>
+                            </imageView>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-k9-g9f" userLabel="Sakura1">
+                                <rect key="frame" x="49" y="0.0" width="260" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-A0-UI6" userLabel="dialogue">
+                                <rect key="frame" x="0.0" y="268" width="667" height="107"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-y1-0Pi">
+                                <rect key="frame" x="9" y="275" width="647" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="158-l9-eGe" userLabel="Sakura2">
+                                <rect key="frame" x="322" y="0.0" width="299" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-IC-24n" userLabel="Selection1">
+                                <rect key="frame" x="38" y="164" width="170" height="48"/>
+                                <connections>
+                                    <action selector="Button1Selected" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAQ-K7-5yj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pd-ae-bg2" userLabel="Selection2">
+                                <rect key="frame" x="463" y="164" width="170" height="48"/>
+                                <connections>
+                                    <action selector="Button2Selected" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKd-eA-5AG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlp-ZM-WLo" userLabel="Selection3">
+                                <rect key="frame" x="248" y="40" width="170" height="48"/>
+                                <connections>
+                                    <action selector="Button3Selected" destination="BYZ-38-t0r" eventType="touchUpInside" id="vte-Ah-EiZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdw-ow-KG7" userLabel="EndLeft">
+                                <rect key="frame" x="27" y="40" width="305" height="172"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-Rb-nnD" userLabel="EndRight">
+                                <rect key="frame" x="340" y="159" width="305" height="168"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZd-Tu-WQS" userLabel="EndMiddle">
+                                <rect key="frame" x="121" y="40" width="397" height="227"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFb-P4-rU7" userLabel="EndTitle">
+                                <rect key="frame" x="265" y="298" width="108" height="45"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="EndLeftImage" destination="Cdw-ow-KG7" id="mGe-O2-kac"/>
+                        <outlet property="EndMiddleImage" destination="gZd-Tu-WQS" id="cOJ-RM-yL0"/>
+                        <outlet property="EndRightImage" destination="iqh-Rb-nnD" id="haD-B0-GDT"/>
+                        <outlet property="EndTitleImage" destination="eFb-P4-rU7" id="Tky-9W-P2z"/>
+                        <outlet property="Sakura1" destination="R2W-k9-g9f" id="z0y-Nv-f53"/>
+                        <outlet property="Sakura2" destination="158-l9-eGe" id="k7X-V5-f9e"/>
+                        <outlet property="Selection1" destination="BGI-IC-24n" id="2RU-fa-kbC"/>
+                        <outlet property="Selection2" destination="8Pd-ae-bg2" id="2OV-pW-q2o"/>
+                        <outlet property="Selection3" destination="Xlp-ZM-WLo" id="Ioe-48-VZL"/>
+                        <outlet property="actor2ImageView" destination="6AD-fR-wXD" id="n9l-Me-LKF"/>
+                        <outlet property="actorImageView" destination="VE3-hL-k5D" id="kOx-bi-SOd"/>
+                        <outlet property="backgroundImageView" destination="AGo-SL-gwx" id="Wwf-iU-sBQ"/>
+                        <outlet property="dialogueImageView" destination="hHN-A0-UI6" id="6Df-VP-HB4"/>
+                        <outlet property="text" destination="f6l-y1-0Pi" id="fRw-uc-j6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="287.5" y="287.5"/>
         </scene>
     </scenes>
 </document>
